@@ -1,6 +1,6 @@
 package uebung1.buisnesslogic;
 
-public class RomanNumberTransformer extends GeneralTransformer implements NumberTransformer {
+public class RomanNumberTransformer extends GeneralTransformer {
     private final String[] romanSymbols = {"I", "IV", "V", "IX", "X", "XL", "L", "XC",
             "C", "CD", "D", "CM", "M"};
     private final int[] romanValues = {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900,

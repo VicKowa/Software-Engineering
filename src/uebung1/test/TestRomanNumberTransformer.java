@@ -7,7 +7,7 @@ class TestRomanNumberTransformer {
 
     @Test
     void TestRomanNumbers() {
-        // Testcode
+        //
         GermanFormatNumberTransformer ger = new GermanFormatNumberTransformer();
         String res = ger.transformNumber(1234);
         System.out.println(res);
