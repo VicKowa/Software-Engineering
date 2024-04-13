@@ -2,7 +2,7 @@ package uebung1.buisnesslogic;
 
 import java.text.DecimalFormat;
 
-public class GermanFormatNumberTransformer extends GeneralTransformer implements NumberTransformer {
+public class GermanFormatNumberTransformer extends GeneralTransformer {
     @Override
     public String transformNumber(int number) {
         if(checkNumeralRange(number)) {
