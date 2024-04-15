@@ -9,12 +9,14 @@ In der abstrakten Klasse werden die funktionen implementiert, welche jeweils in 
 GermanFormatNumberTransf. beide vorkommen, sodass sie diese dann erben können.
 abstrakt -> Weil kein GeneralTransformer instanziierbar sein soll 
 
+
 Frage 2: Wie kann die Objekterzeugung mit Hilfe einer zusätzlichen Klasse durchgeführt werden? 
 In welchem Package sollte diese zusätzliche Klasse liegen?
 
 A: Man kann eine neue Klasse erstellen, welche jeweils eine „static“ Methode hat,
 um das jeweilige Objekt einer anderen Klasse zu erzeugen. Eine andere Aufgabe hat diese Zusatzklasse nicht.
 Die zusätzliche Klasse sollte in demselben Package liegen, wie die Klassen dessen Objekte erzeugt werden sollen.
+
 
 Frage 3: Welches Entwurfsmuster liegt für diesen Anwendungsfall nahe?
 Welchen Vorteil bringt die Nutzung dieses Entwurfsmusters?
@@ -23,6 +25,7 @@ A: Das Entwurfsmuster ist das Factory Design Pattern. Der Vorteil besteht darin,
 Das bedeutet man kann theoretisch die Klasse hinter der Fabrikklasse, also die Klasse,
 für die ein Objekt erzeugt werden soll, einfach austauschen, ohne dass man viel im Code selbst umändern muss.
 Der Code wird dadurch flexibler und einfacher zu warten.
+
 
 Frage 4: Warum sollten Testfälle in einer separaten Test-Klasse implementiert
 werden?
@@ -38,6 +41,7 @@ A: Sie dienen zum Partitionieren von gleichen erwarteten Ergebnissen.
 Eine Äquivalenzklasse beinhaltet also alle Eingabewerte, die sich bei der Eingabe in das Testobjekt gleich verhalten.
 Somit lassen sich die Eingaben eingrenzen und entsprechend gruppieren. Zudem werden alle möglichen Eingaben effizient 
 abgedeckt in einer minimalen Anzahl an Tests.
+
 
 Frage 6: Warum lässt sich für die Klasse Client nicht ohne weiteres ein Blackbox-Test umsetzen?
 
