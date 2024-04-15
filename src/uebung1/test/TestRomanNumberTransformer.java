@@ -32,74 +32,72 @@ class TestRomanNumberTransformer {
         //Testcode
         //1. Äquivalenzklasse
         //Testcase 1
-        Assertions.assertEquals("I", transf.transformNumber(1));
-        //Testcase 2
         Assertions.assertEquals("MD", transf.transformNumber(1500));
-        //Testcase 3
+        //Testcase 2
         Assertions.assertEquals("MMM", transf.transformNumber(3000));
-        //Testcase 4
+        //Testcase 3
         Assertions.assertEquals("I", transf.transformNumber(1));
-        //Testcase 5
+        //Testcase 4
         Assertions.assertEquals("II", transf.transformNumber(2));
-        //Testcase 6
+        //Testcase 5
         Assertions.assertEquals("III", transf.transformNumber(3));
-        //Testcase 7
+        //Testcase 6
         Assertions.assertEquals("IV", transf.transformNumber(4));
-        //Testcase 8
+        //Testcase 7
         Assertions.assertEquals("V", transf.transformNumber(5));
-        //Testcase 9
+        //Testcase 8
         Assertions.assertEquals("VI", transf.transformNumber(6));
-        //Testcase 10
+        //Testcase 9
         Assertions.assertEquals("VII", transf.transformNumber(7));
-        //Testcase 11
+        //Testcase 10
         Assertions.assertEquals("VIII", transf.transformNumber(8));
-        //Testcase 12
+        //Testcase 11
         Assertions.assertEquals("IX", transf.transformNumber(9));
-        //Testcase 13
+        //Testcase 12
         Assertions.assertEquals("X", transf.transformNumber(10));
-        //Testcase 14
+        //Testcase 13
         Assertions.assertEquals("XL", transf.transformNumber(40));
-        //Testcase 15
+        //Testcase 14
         Assertions.assertEquals("L", transf.transformNumber(50));
-        //Testcase 16
+        //Testcase 15
         Assertions.assertEquals("XC", transf.transformNumber(90));
-        //Testcase 17
+        //Testcase 16
         Assertions.assertEquals("C", transf.transformNumber(100));
-        //Testcase 18
+        //Testcase 17
         Assertions.assertEquals("CD", transf.transformNumber(400));
-        //Testcase 19
+        //Testcase 18
         Assertions.assertEquals("D", transf.transformNumber(500));
-        //Testcase 20
+        //Testcase 19
         Assertions.assertEquals("CM", transf.transformNumber(900));
-        //Testcase 21
+        //Testcase 20
         Assertions.assertEquals("M", transf.transformNumber(1000));
 
     }
 
     private void uAek2() {
         //2. Äquivalenzklasse
-        //Testcase 22
+        //Testcase 21
         Assertions.assertEquals(error, transf.transformNumber(0));
-        //Testcase 23
+        //Testcase 22
         Assertions.assertEquals(error, transf.transformNumber(-23453));
-        //Testcase 24
+        //Testcase 23
         Assertions.assertEquals(error, transf.transformNumber(Integer.MIN_VALUE));
     }
 
     private void uAek3(){
         //4. Äquivalenzklasse
-        //Testcase 25
+        //Testcase 24
         Assertions.assertEquals(error, transf.transformNumber(3001));
-        //Testcase 26
+        //Testcase 25
         Assertions.assertEquals(error, transf.transformNumber(345632));
-        //Testcase 27
+        //Testcase 26
         Assertions.assertEquals(error, transf.transformNumber(Integer.MAX_VALUE));
 
     }
 
     private void uAek4(){
         // 3. Äquivalenzklasse
-        // Testcase 28
+        // Testcase 27
         // Assertions.assertEquals(NaN, transf.transformNumber(("ABC"));
     }
 }
