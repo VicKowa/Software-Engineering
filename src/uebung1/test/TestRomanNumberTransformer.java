@@ -22,8 +22,8 @@ class TestRomanNumberTransformer {
 
         uAek1(); //gültige Äquivalenzklasse1
         uAek2(); //ungültige Äquivalenzklasse2
-        // uAek3(); //ungültige Äquivalenzklasse3; Testcase 10 mit "ABC" -> Compilerfehler
-        uAek4(); //ungültige Äquivalenzklasse4
+        uAek3(); //ungültige Äquivalenzklasse3
+        uAek4(); //ungültige Äquivalenzklasse4; Testcase 10 mit "ABC" -> Compilerfehler
     }
 
 
@@ -87,19 +87,19 @@ class TestRomanNumberTransformer {
     }
 
     private void uAek3(){
-        // 3. Äquivalenzklasse
-        // Testcase 25
-        // Assertions.assertEquals(NaN, transf.transformNumber(("ABC"));
+        //4. Äquivalenzklasse
+        //Testcase 25
+        Assertions.assertEquals(error, transf.transformNumber(3001));
+        //Testcase 26
+        Assertions.assertEquals(error, transf.transformNumber(345632));
+        //Testcase 27
+        Assertions.assertEquals(error, transf.transformNumber(Integer.MAX_VALUE));
 
     }
 
     private void uAek4(){
-        //4. Äquivalenzklasse
-        //Testcase 26
-        Assertions.assertEquals(error, transf.transformNumber(3001));
-        //Testcase 27
-        Assertions.assertEquals(error, transf.transformNumber(345632));
-        //Testcase 28
-        Assertions.assertEquals(error, transf.transformNumber(Integer.MAX_VALUE));
+        // 3. Äquivalenzklasse
+        // Testcase 28
+        // Assertions.assertEquals(NaN, transf.transformNumber(("ABC"));
     }
 }
