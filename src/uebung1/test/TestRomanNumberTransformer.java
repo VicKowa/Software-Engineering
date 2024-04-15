@@ -10,7 +10,7 @@ import static java.lang.Float.NaN;
 
 class TestRomanNumberTransformer {
 
-    RomanNumberTransformer transf;
+    private RomanNumberTransformer transf;
     private final String error = "Fehler: ungültiger Wertebereich";
     @BeforeEach
     void init() {
@@ -18,7 +18,7 @@ class TestRomanNumberTransformer {
     }
 
     @Test
-    void TestRomanNumbers() {
+    void testRomanNumbers() {
 
         uAek1(); //gültige Äquivalenzklasse1
         uAek2(); //ungültige Äquivalenzklasse2
