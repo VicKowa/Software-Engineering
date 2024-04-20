@@ -1,4 +1,4 @@
-package uebung2;
+package uebung2.buisnesslogic;
 
 public interface PersonCard {
     public String getFirstName();
