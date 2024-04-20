@@ -1,4 +1,4 @@
-package uebung2.buisnesslogic;
+package uebung2.businesslogic;
 
 public class CardboxException extends Exception{
     public CardboxException(int id){

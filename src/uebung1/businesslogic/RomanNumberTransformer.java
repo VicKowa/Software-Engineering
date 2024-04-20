@@ -1,4 +1,4 @@
-package uebung1.buisnesslogic;
+package uebung1.businesslogic;
 
 public class RomanNumberTransformer extends GeneralTransformer {
     private final String[] romanSymbols = {"I", "IV", "V", "IX", "X", "XL", "L", "XC",

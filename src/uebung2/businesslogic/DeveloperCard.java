@@ -1,4 +1,4 @@
-package uebung2.buisnesslogic;
+package uebung2.businesslogic;
 
 public class DeveloperCard extends AbstractPersonCard{
     private final boolean hasEnoughCoffee;

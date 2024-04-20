@@ -3,10 +3,8 @@ package uebung1.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import uebung1.buisnesslogic.RomanNumberTransformer;
-import uebung1.buisnesslogic.TransformerFactory;
-
-import static java.lang.Float.NaN;
+import uebung1.businesslogic.RomanNumberTransformer;
+import uebung1.businesslogic.TransformerFactory;
 
 class TestRomanNumberTransformer {
 

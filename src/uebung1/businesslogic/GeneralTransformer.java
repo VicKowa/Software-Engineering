@@ -1,4 +1,4 @@
-package uebung1.buisnesslogic;
+package uebung1.businesslogic;
 
 public abstract class GeneralTransformer implements NumberTransformer {
     protected boolean checkNumeralRange(int number) {

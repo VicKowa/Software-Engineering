@@ -1,6 +1,6 @@
 package uebung1.client;
 
-import uebung1.buisnesslogic.TransformerFactory; 
+import uebung1.businesslogic.TransformerFactory;
 
 public class Client {
 

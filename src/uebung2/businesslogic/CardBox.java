@@ -1,4 +1,4 @@
-package uebung2.buisnesslogic;
+package uebung2.businesslogic;
 
 import java.util.LinkedList;
 import java.util.List;

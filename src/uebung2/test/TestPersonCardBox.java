@@ -1,10 +1,10 @@
 package uebung2.test;
 
 import org.junit.jupiter.api.*;
-import uebung2.buisnesslogic.CardBox;
-import uebung2.buisnesslogic.CardboxException;
-import uebung2.buisnesslogic.DeveloperCard;
-import uebung2.buisnesslogic.EnduserCard;
+import uebung2.businesslogic.CardBox;
+import uebung2.businesslogic.CardboxException;
+import uebung2.businesslogic.DeveloperCard;
+import uebung2.businesslogic.EnduserCard;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestPersonCardBox {

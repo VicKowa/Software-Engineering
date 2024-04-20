@@ -1,4 +1,4 @@
-package uebung1.buisnesslogic;
+package uebung1.businesslogic;
 
 import java.text.DecimalFormat;
 

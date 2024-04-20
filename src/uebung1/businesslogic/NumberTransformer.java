@@ -1,4 +1,4 @@
-package uebung1.buisnesslogic;
+package uebung1.businesslogic;
 
 public interface NumberTransformer {
     String transformNumber(int number);
