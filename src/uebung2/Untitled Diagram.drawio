@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-22T15:41:27.133Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 OPR/107.0.0.0" etag="jjnHx49eOAeDaLMR8sSM" version="24.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-22T15:43:10.272Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 OPR/107.0.0.0" etag="U82iSM5ZOcimqNIx9gc9" version="24.2.7" type="github">
   <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
     <mxGraphModel dx="1257" dy="586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -149,7 +149,7 @@
         <mxCell id="ZFWCdyX9ZIramkiiMKNh-9" value="Abnahme vorbereiten mit kritischen Fehler" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" vertex="1" parent="1c1d494c118603dd-3">
           <mxGeometry x="8.25" y="880" width="141.75" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="pIcPM3kmBpWuhy6s9xmB-33" value="externer Gutachter" style="swimlane;html=1;startSize=20;" parent="1c1d494c118603dd-1" vertex="1">
+        <mxCell id="pIcPM3kmBpWuhy6s9xmB-33" value="Externer Gutachter" style="swimlane;html=1;startSize=20;" parent="1c1d494c118603dd-1" vertex="1">
           <mxGeometry x="720" y="20" width="293.5" height="2170" as="geometry" />
         </mxCell>
         <mxCell id="pIcPM3kmBpWuhy6s9xmB-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="pIcPM3kmBpWuhy6s9xmB-33" source="pIcPM3kmBpWuhy6s9xmB-82" target="pIcPM3kmBpWuhy6s9xmB-83" edge="1">
@@ -161,7 +161,7 @@
         <mxCell id="pIcPM3kmBpWuhy6s9xmB-83" value="bewerten" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;arcSize=50;" parent="pIcPM3kmBpWuhy6s9xmB-33" vertex="1">
           <mxGeometry x="80" y="180" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="1c1d494c118603dd-4" value="interner Projektleiter" style="swimlane;html=1;startSize=20;" parent="1c1d494c118603dd-1" vertex="1">
+        <mxCell id="1c1d494c118603dd-4" value="Interner Projektleiter" style="swimlane;html=1;startSize=20;" parent="1c1d494c118603dd-1" vertex="1">
           <mxGeometry x="1013.5" y="20" width="450" height="2170" as="geometry" />
         </mxCell>
         <mxCell id="pIcPM3kmBpWuhy6s9xmB-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1c1d494c118603dd-4" source="pIcPM3kmBpWuhy6s9xmB-72" target="pIcPM3kmBpWuhy6s9xmB-79" edge="1">
