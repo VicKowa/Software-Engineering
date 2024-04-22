@@ -23,8 +23,6 @@ public abstract class AbstractPersonCard implements PersonCard
 
     /**
      *
-     * <h1>Sollte nur zum Testen benutzt werden</h1>
-     *
      * Constructor for the AbstractPersonCard class
      * @param firstName the first name of the person
      * @param lastName the last name of the person
