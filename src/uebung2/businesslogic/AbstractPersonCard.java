@@ -1,6 +1,8 @@
 package uebung2.businesslogic;
 
-public abstract class AbstractPersonCard implements PersonCard
+import java.io.Serializable;
+
+public abstract class AbstractPersonCard implements PersonCard, Serializable
 {
     private static int nextId = 1;
 

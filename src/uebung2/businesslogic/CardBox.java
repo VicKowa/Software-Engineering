@@ -1,16 +1,51 @@
 package uebung2.businesslogic;
 
+import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CardBox {
-    private final List<PersonCard> cards;
+public class CardBox implements Serializable {
+
+    private List<PersonCard> cards;
+    //Singleton Pattern
+    private static CardBox instance;
 
     /**
      * Constructor for the CardBox class
      */
-    public CardBox(){
+    private CardBox(){
         this.cards = new LinkedList<>();
+    }
+
+    public static CardBox getInstance() {
+        if(instance == null) {
+            instance = new CardBox();
+        }
+        return instance;
+    }
+
+    public void save() throws IOException, CardboxStorageException {
+
+        if(cards.isEmpty()) {
+            throw new CardboxStorageException("speichern");
+        }
+        // das hier ist ein try-with-Ressource Block der closed automatisch die streams am Ende
+        try (FileOutputStream fos = new FileOutputStream("CardboxObjects.ser");
+                ObjectOutputStream oos = new ObjectOutputStream(fos)){
+            oos.writeObject(cards);
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    public void load() throws IOException, ClassNotFoundException {
+        if(!cards.isEmpty()) {
+            cards = null;
+        }
+        try(FileInputStream fis = new FileInputStream("CardboxObjects.ser");
+                ObjectInputStream ois = new ObjectInputStream(fis)) {
+            cards = (List<PersonCard>) ois.readObject(); // bisschen shady der Cast hier, hast du eine Idee?
+        }
+
     }
 
     /**
@@ -45,14 +80,19 @@ public class CardBox {
         return "Karte mit der ID " + id + " wurde nicht gefunden";
     }
 
-    /**
-     *
-     * Shows the content of the CardBox
-     */
-    public void showContent(){
-        for (PersonCard personCard : cards) {
-            System.out.println(personCard.toString());
-        }
+//    /**
+//     *
+//     * Shows the content of the CardBox
+//     */
+//    public void showContent(){
+//        for (PersonCard personCard : cards) {
+//            System.out.println(personCard.toString());
+//        }
+//    }
+
+
+    public List<PersonCard> getCurrentList() {
+        return cards;
     }
 
     /**
