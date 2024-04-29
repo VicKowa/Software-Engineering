@@ -73,11 +73,12 @@ public class TestPersonCardBox {
         Assertions.assertEquals(3, cardBox.size());
     }
 
-//    @Test
-//    @Order(6)
-//    void testShowContent() {
-//        cardBox.showContent();
-//    }
+    @Test
+    @Order(6)
+    void testOnlyOneInstance() {
+        Assertions.assertSame(cardBox, CardBox.getInstance());
+    }
+
     @Test
     @Order(7)
     void testSaveExistingCards() throws CardboxStorageException {
