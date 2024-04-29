@@ -24,7 +24,6 @@ public class TestPersonCardBox {
     @Test
     @Order(2)
     void testLoadCardsWithNoFile() {
-        //sollte hier nicht eigentlich auch eine CardboxStorageException geworfen werden?
         Assertions.assertThrows(CardboxStorageException.class, () -> cardBox.load(),"keine Datei zum Laden");
     }
 

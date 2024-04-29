@@ -2,7 +2,6 @@ package uebung2.client;
 
 import uebung2.businesslogic.*;
 
-import java.util.List;
 
 public class Client {
 
@@ -15,8 +14,7 @@ public class Client {
         cbox.addPersonCard(new EnduserCard("Maria", "Zahn", true));
         cbox.addPersonCard(new EnduserCard("Siegfried", "Laus", false));
 
-        List<PersonCard> list = cbox.getCurrentList();
-        personCardView.showContent(list);
+        personCardView.showContent(cbox.getCurrentList());
 
     }
 }

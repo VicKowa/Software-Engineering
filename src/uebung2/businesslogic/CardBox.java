@@ -31,7 +31,7 @@ public class CardBox implements Serializable {
         }
         // das hier ist ein try-with-Ressource Block der closed automatisch die streams am Ende
         try (FileOutputStream fos = new FileOutputStream("CardboxObjects.ser");
-                ObjectOutputStream oos = new ObjectOutputStream(fos)){
+                ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 
             oos.writeObject(cards);
         } catch (IOException e) {
