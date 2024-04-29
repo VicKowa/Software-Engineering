@@ -1,6 +1,6 @@
-package uebung2.client;
+package uebung3.client;
 
-import uebung2.businesslogic.*;
+import uebung3.businesslogic.*;
 
 
 public class Client {

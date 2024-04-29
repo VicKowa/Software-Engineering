@@ -1,62 +1,16 @@
 package uebung2.businesslogic;
 
-import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CardBox implements Serializable {
-
-    private List<PersonCard> cards;
-    //Singleton Pattern
-    private static CardBox instance;
+public class CardBox {
+    private final List<PersonCard> cards;
 
     /**
      * Constructor for the CardBox class
      */
-    private CardBox(){
+    public CardBox(){
         this.cards = new LinkedList<>();
-    }
-
-    public static CardBox getInstance() {
-        if(instance == null) {
-            instance = new CardBox();
-        }
-        return instance;
-    }
-
-    public void save() throws CardboxStorageException {
-
-        if(cards.isEmpty()) {
-            throw new CardboxStorageException("keine Karten zum speichern vorhanden");
-        }
-        // das hier ist ein try-with-Ressource Block der closed automatisch die streams am Ende
-        try (FileOutputStream fos = new FileOutputStream("CardboxObjects.ser");
-                ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-
-            oos.writeObject(cards);
-        } catch (IOException e) {
-            throw new CardboxStorageException("beim speichern der Karten in die Datei");
-        }
-    }
-
-    @SuppressWarnings("unchecked")
-    public void load() throws CardboxStorageException {
-        if(!cards.isEmpty()) {
-            cards = null;
-        }
-        try(FileInputStream fis = new FileInputStream("CardboxObjects.ser");
-                ObjectInputStream ois = new ObjectInputStream(fis)) {
-
-            Object temp = ois.readObject();
-            if(temp instanceof List<?>) {
-                cards = (List<PersonCard>) temp;
-            }
-        } catch (IOException e) {
-            throw new CardboxStorageException("beim öffen/lesen der Datei");
-        } catch (ClassNotFoundException e) {
-            throw new CardboxStorageException("serialisierte Klasse nicht gefunden");
-        }
-
     }
 
     /**
@@ -91,19 +45,14 @@ public class CardBox implements Serializable {
         return "Karte mit der ID " + id + " wurde nicht gefunden";
     }
 
-//    /**
-//     *
-//     * Shows the content of the CardBox
-//     */
-//    public void showContent(){
-//        for (PersonCard personCard : cards) {
-//            System.out.println(personCard.toString());
-//        }
-//    }
-
-
-    public List<PersonCard> getCurrentList() {
-        return cards;
+    /**
+     *
+     * Shows the content of the CardBox
+     */
+    public void showContent(){
+        for (PersonCard personCard : cards) {
+            System.out.println(personCard.toString());
+        }
     }
 
     /**

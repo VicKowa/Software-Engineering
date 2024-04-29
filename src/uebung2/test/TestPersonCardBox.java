@@ -3,8 +3,6 @@ package uebung2.test;
 import org.junit.jupiter.api.*;
 import uebung2.businesslogic.*;
 
-import java.io.File;
-
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestPersonCardBox {
 
@@ -12,7 +10,7 @@ public class TestPersonCardBox {
 
     @BeforeAll
     static void setUp() {
-        cardBox = CardBox.getInstance();
+        cardBox = new CardBox();
     }
 
     @Test
@@ -23,18 +21,6 @@ public class TestPersonCardBox {
 
     @Test
     @Order(2)
-    void testLoadCardsWithNoFile() {
-        Assertions.assertThrows(CardboxStorageException.class, () -> cardBox.load(),"keine Datei zum Laden");
-    }
-
-    @Test
-    @Order(3)
-    void testSaveEmptyCards() {
-        Assertions.assertThrows(CardboxStorageException.class, () -> cardBox.save(), "Cardbox ist leer -> No save");
-    }
-
-    @Test
-    @Order(3)
     void testAddDeveloperCards() throws CardboxException {
         cardBox.addPersonCard(new DeveloperCard("Max", "Mustermann", true));
         cardBox.addPersonCard(new DeveloperCard("Erika", "Musterfrau", false));
@@ -42,7 +28,7 @@ public class TestPersonCardBox {
     }
 
     @Test
-    @Order(4)
+    @Order(3)
     void testAddEnduserCards() throws CardboxException {
         cardBox.addPersonCard(new EnduserCard("Hans", "Dampf", true));
         cardBox.addPersonCard(new EnduserCard("Gretel", "Dampf", false));
@@ -51,7 +37,7 @@ public class TestPersonCardBox {
 
 
     @Test
-    @Order(5)
+    @Order(4)
     void testDeletePersonCard() {
 
         String res;
@@ -66,30 +52,16 @@ public class TestPersonCardBox {
     }
 
     @Test
-    @Order(6)
+    @Order(5)
     void testAddExistingCard() {
         Assertions.assertThrows(CardboxException.class, () ->
             cardBox.addPersonCard(new DeveloperCard("Max", "Mustermann", 1, true)));
-        Assertions.assertEquals(3, cardBox.size());
-    }
-
-//    @Test
-//    @Order(6)
-//    void testShowContent() {
-//        cardBox.showContent();
-//    }
-    @Test
-    @Order(7)
-    void testSaveExistingCards() throws CardboxStorageException {
-        cardBox.save();
-        Assertions.assertTrue(new File("CardboxObjects.ser").exists(),"Datei nicht vorhanden");
     }
 
     @Test
-    @Order(8)
-    void testLoadCards() throws CardboxStorageException {
-        cardBox.load();
-        Assertions.assertEquals(3, cardBox.size());
+    @Order(6)
+    void testShowContent() {
+        cardBox.showContent();
     }
 
 }

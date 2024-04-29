@@ -1,4 +1,4 @@
-package uebung2.businesslogic;
+package uebung3.businesslogic;
 
 public class CardboxStorageException extends Exception {
     // kann man das noch schöner machen?
