@@ -43,7 +43,11 @@ public class CardBox implements Serializable {
         }
         try(FileInputStream fis = new FileInputStream("CardboxObjects.ser");
                 ObjectInputStream ois = new ObjectInputStream(fis)) {
-            cards = (List<PersonCard>) ois.readObject(); // bisschen shady der Cast hier, hast du eine Idee?
+
+            Object temp = ois.readObject();
+            if(temp instanceof List<?>) {
+                cards = (List<PersonCard>) temp;
+            }
         }
 
     }
