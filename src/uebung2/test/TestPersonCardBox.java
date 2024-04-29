@@ -4,8 +4,6 @@ import org.junit.jupiter.api.*;
 import uebung2.businesslogic.*;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestPersonCardBox {
@@ -27,7 +25,7 @@ public class TestPersonCardBox {
     @Order(2)
     void testLoadCardsWithNoFile() {
         //sollte hier nicht eigentlich auch eine CardboxStorageException geworfen werden?
-        Assertions.assertThrows(FileNotFoundException.class, () -> cardBox.load(),"keine Datei zum Laden");
+        Assertions.assertThrows(CardboxStorageException.class, () -> cardBox.load(),"keine Datei zum Laden");
     }
 
     @Test
@@ -83,14 +81,14 @@ public class TestPersonCardBox {
 //    }
     @Test
     @Order(7)
-    void testSaveExistingCards() throws CardboxStorageException, IOException {
+    void testSaveExistingCards() throws CardboxStorageException {
         cardBox.save();
         Assertions.assertTrue(new File("CardboxObjects.ser").exists(),"Datei nicht vorhanden");
     }
 
     @Test
     @Order(8)
-    void testLoadCards() throws IOException, ClassNotFoundException {
+    void testLoadCards() throws CardboxStorageException {
         cardBox.load();
         Assertions.assertEquals(3, cardBox.size());
     }

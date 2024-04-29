@@ -5,6 +5,6 @@ public class CardboxStorageException extends Exception {
     // bzw. wann müssen wir die Exception immer werfen
 
     public CardboxStorageException(String message) {
-        super("Fehler: beim" + message + "der Objekte");
+        super("Fehler: " + message);
     }
 }

@@ -24,20 +24,23 @@ public class CardBox implements Serializable {
         return instance;
     }
 
-    public void save() throws IOException, CardboxStorageException {
+    public void save() throws CardboxStorageException {
 
         if(cards.isEmpty()) {
-            throw new CardboxStorageException("speichern");
+            throw new CardboxStorageException("keine Karten zum speichern vorhanden");
         }
         // das hier ist ein try-with-Ressource Block der closed automatisch die streams am Ende
         try (FileOutputStream fos = new FileOutputStream("CardboxObjects.ser");
                 ObjectOutputStream oos = new ObjectOutputStream(fos)){
+
             oos.writeObject(cards);
+        } catch (IOException e) {
+            throw new CardboxStorageException("beim speichern der Karten in die Datei");
         }
     }
 
     @SuppressWarnings("unchecked")
-    public void load() throws IOException, ClassNotFoundException {
+    public void load() throws CardboxStorageException {
         if(!cards.isEmpty()) {
             cards = null;
         }
@@ -48,6 +51,10 @@ public class CardBox implements Serializable {
             if(temp instanceof List<?>) {
                 cards = (List<PersonCard>) temp;
             }
+        } catch (IOException e) {
+            throw new CardboxStorageException("beim öffen/lesen der Datei");
+        } catch (ClassNotFoundException e) {
+            throw new CardboxStorageException("serialisierte Klasse nicht gefunden");
         }
 
     }
