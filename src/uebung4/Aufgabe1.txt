@@ -1,0 +1,51 @@
+Übung4:
+1.1:
+Bitte geben Sie jeweils ein Beispiel für eine funktionale, eine nicht-funktionale und eine
+technische Anforderung an.
+
+    funkt. Anforderung:
+        Ein Schüler soll sich über die Schulhomepage seinen Stundenplan herunterladen können.
+
+    nicht-funkt. Anforderung:
+        Das System soll von vielen Schülern gleichzeitig benutzt werden können.
+
+    technische Anforderung:
+        Die Software benötigt einen Elasticsearch engine.
+
+1.2:
+Bewerten Sie die folgenden User Stories nach den INVEST-Kriterien. Geben Sie dabei
+zu jedem „Buchstaben“ von INVEST bei jeder User Story an, ob das betreffende
+Kriterium eher erfüllt wird oder eher nicht.
+
+
+User Story |    I   |   N   |   V   |   E   |   S   |   T   |
+-------------------------------------------------------------
+U1              +       -       -       +       -       +
+-------------------------------------------------------------
+U2              -       -       +       +       +       +
+-------------------------------------------------------------
+U3              -       -       +       -       -       -
+-------------------------------------------------------------
+U4
+-------------------------------------------------------------
+U5
+
+
+1.3:
+Geben Sie zu jeder dieser User Stories an, ob Sie sie in dieser Form für sinnvoll
+formuliert halten oder nicht und begründen Sie dies. Sie müssen dabei nicht auf jedes
+INVEST-Kriterium eingehen, sollten es aber herausstellen, wenn es offensichtliche
+Gründe gibt, warum eine User Story nicht oder nur extrem schwierig umsetzbar ist.
+
+U1: Ist sinnvoll formuliert, es ist klar, welche Funktion der Benutzer möchte, die Umsetzung erfordert keinen
+großen Aufwand, ist testbar und kann unabhängig voneinander entwickelt werden.
+
+U2: Ist sinnvoll formuliert, da man die Story gut umsetzen kann und der Zeitaufwand gut eingeschätzt werden kann,
+ebenfalls kann das Anlegen eines Benutzerprofils gut getestet werden.
+
+U3: Ist nicht sinnvoll formuliert, weil die Umsetzung nicht unabhängig ist, es schwierig einzuschätzen ist,
+wie lange die Optimierung dauert und nur schwierig testbar ist.
+
+U4:
+
+U5:
