@@ -23,6 +23,7 @@ public class US_ManagementSystem implements Serializable {
     }
 
     public void executeCommand(String command) {
+        //will split the string on spaces that are not enclosed in quotes.
         String[] parts = command.split("\\s+(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
         try {
             switch (parts[0]) {
