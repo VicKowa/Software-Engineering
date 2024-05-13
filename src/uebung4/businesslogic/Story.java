@@ -10,11 +10,6 @@ import java.util.List;
 public class Story extends USPart {
 
     private final String prio;
-    //findest du die HashMap eine gute Idee, so kann man halt mit der Idee in O(1) auf
-    // die Task zugreifen
-    //alternativ ginge auch arraylist aber
-    //nvm arraylist ist besser da kann man auch direkt mit der ID arbeiten und ich glaube hasmap mag der nicht so
-    //private HashMap<Integer, Task> tasks;
     private final List<Task> tasks;
 
     public Story(int id, String description, String prio) {
@@ -23,11 +18,12 @@ public class Story extends USPart {
         this.tasks = new LinkedList<>();
     }
 
-    //oder assign nur über die ID, bedeutet man speichert nicht die Taskobjekte, sondern nur die Taskids, welche der Story zugeordnet sind
+
     public void assignTask(Task task) {
         tasks.add(task);
     }
 
+    // Only for testing purposes
     public List<Task> getTasks() {
         return tasks;
     }
