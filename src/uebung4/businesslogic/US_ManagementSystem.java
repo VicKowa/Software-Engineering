@@ -1,8 +1,10 @@
 package uebung4.businesslogic;
 
 import java.io.*;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.function.Function;
 
 public class US_ManagementSystem implements Serializable {
 
@@ -14,10 +16,13 @@ public class US_ManagementSystem implements Serializable {
         this.tasks = new LinkedList<>();
     }
 
+
+    // Only for testing purposes
     public List<Story> getStories() {
         return stories;
     }
 
+    // Only for testing purposes
     public List<Task> getTasks() {
         return tasks;
     }
@@ -84,14 +89,24 @@ public class US_ManagementSystem implements Serializable {
     private void assignTask(String[] parts) throws IllegalArgumentException {
         int storyId = Integer.parseInt(parts[1]);
         int taskId = Integer.parseInt(parts[2]);
-        Story story = stories.stream().filter(s -> s.getId() == storyId).findFirst().orElse(null);
-        Task task = tasks.stream().filter(t -> t.getId() == taskId).findFirst().orElse(null);
-        if (story != null && task != null) {
-            story.assignTask(task);
-            System.out.println("Task mit ID " + taskId + " wurde erfolgreich User Story mit ID " + storyId + " zugeordnet.");
-        } else {
-            throw new IllegalArgumentException("Story or Task not found");
+
+//      Story story = stories.stream().filter(s -> s.getId() == storyId).findFirst().orElse(null);
+//      Task task = tasks.stream().filter(t -> t.getId() == taskId).findFirst().orElse(null);
+
+
+        for(Story story : stories) {
+            if(story.getId() == storyId) {
+                for(Task task : tasks) {
+                    if(task.getId() == taskId) {
+                        story.assignTask(task);
+                        System.out.println("Task mit ID " + taskId + " wurde erfolgreich User Story mit ID " + storyId + " zugeordnet.");
+                        return;
+                    }
+                }
+                throw new IllegalArgumentException("Task not found");
+            }
         }
+        throw new IllegalArgumentException("Story not found");
     }
 
     private boolean containsId(int id, List< ? extends USPart> usParts) {
