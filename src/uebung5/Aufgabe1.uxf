@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1540</x>
+      <y>784</y>
+      <w>84</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Student</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1736</x>
+      <y>994</y>
+      <w>140</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Unternehmen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>1694</x>
+      <y>602</y>
+      <w>112</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>{abstact}
+User</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1750</x>
+      <y>742</y>
+      <w>42</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1610</x>
+      <y>686</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1148</x>
+      <y>616</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Login</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1176</x>
+      <y>1218</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Abgleichen HReg</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1302</x>
+      <y>616</y>
+      <w>434</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>290.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>1078</y>
+      <w>462</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>310.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>742</x>
+      <y>560</y>
+      <w>714</w>
+      <h>868</h>
+    </coordinates>
+    <panel_attributes>System
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1106</x>
+      <y>728</y>
+      <w>238</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Programmiersprachen-
+abfragen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>98</x>
+      <y>574</y>
+      <w>630</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>**Use Case: Login**
+**Akteure: Student, Unternehmen**
+**Ablauf:**
+1. Anwender loggt sich ein
+2. Falls Anwender ein Unternehmen ist, wird das HReg abgeglichen
+3. 
+**Vorbedingung:**
+                Anwender ist in registrierter Student oder Unternehmen
+**Nachbedingung:**
+                Anwender ist eingeloggt.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1106</x>
+      <y>826</y>
+      <w>238</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Programmiersprachen-
+verwalten
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>826</y>
+      <w>238</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1330</x>
+      <y>742</y>
+      <w>238</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>150.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1134</x>
+      <y>994</y>
+      <w>224</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Suchanfragen stellen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1134</x>
+      <y>1050</y>
+      <w>224</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Projekte planen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1134</x>
+      <y>1106</y>
+      <w>224</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>EMail benachrichtigung</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>798</x>
+      <y>1050</y>
+      <w>224</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Abfrage Studentendaten</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>196</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1008</x>
+      <y>1050</y>
+      <w>154</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>1078</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>100.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>1008</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1344</x>
+      <y>994</y>
+      <w>448</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1344</x>
+      <y>1050</y>
+      <w>448</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1344</x>
+      <y>1078</y>
+      <w>448</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;40.0;300.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>448</x>
+      <y>1260</y>
+      <w>224</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;System&gt;&gt;
+Handelsregister
+valign=center</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>658</x>
+      <y>1232</y>
+      <w>546</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>370.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>98</x>
+      <y>882</y>
+      <w>630</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>**Use Case: Programmiersprachenabfragen**
+**Akteure: Student**
+**Ablauf:**
+1. Beherrschte Programmiersprachen abgefragt
+2. Ergebnisse speichern
+3. 
+**Vorbedingung:**
+                Anwender ist in registrierter Student, ist eingeloggt
+                Anwender ist in der Programmiersprachenverwaltung
+**Nachbedingung:**
+                Ergebnisse gespeichert</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
