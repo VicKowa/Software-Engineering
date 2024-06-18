@@ -82,17 +82,6 @@ halign=left</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>420</x>
-      <y>400</y>
-      <w>240</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>DTO Ergebnissliste zum Reuse</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>100</x>
@@ -117,13 +106,13 @@ halign=left</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>650</x>
+      <x>560</x>
       <y>410</y>
-      <w>180</w>
+      <w>270</w>
       <h>50</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;10.0;160.0;30.0</additional_attributes>
+    <additional_attributes>10.0;10.0;250.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -136,5 +125,16 @@ halign=left</panel_attributes>
     <panel_attributes>lt=.&gt;
 &lt;&lt;includes&gt;&gt;</panel_attributes>
     <additional_attributes>20.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>270</x>
+      <y>400</y>
+      <w>300</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>DTO Ergebnissliste zum wiederverwenden</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
