@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>0</x>
+      <y>90</y>
+      <w>140</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Es sollte das Adapter Pattern verwendet werden.
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>210</y>
+      <w>300</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ReiseAnbieter
+--
++runQuery(d : QueryObject): QueryResult</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>210</y>
+      <w>320</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Hotelsuche
+-
+-adapter: Adapter
+-
++Hotelsuche(ad: Adapter)
++sucheHotel(auf: SuchAuftag): SuchErgebnis
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>460</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>SuchAuftrag
+-
+//attribute</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>460</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>SuchErgebnis
+-
+//attribute
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>450</y>
+      <w>370</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Adapter
+-
+- anb: ReiseAnbieter
+
+--
++sucheHotel(auf: SuchAuftag): SuchErgebnis
++Adapter(anb: ReiseAnbieter)
+-transformInput(auf: SuchAuftrag): QueryObject
+-transformOutput(res: QueryResult): SuchErgebnis
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>320</y>
+      <w>30</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>300</y>
+      <w>320</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>300.0;150.0;300.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
