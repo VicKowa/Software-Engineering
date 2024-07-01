@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="15.0.0">
+<diagram program="umlet" version="14.3.0">
   <zoom_level>10</zoom_level>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>0</x>
-      <y>90</y>
+      <x>320</x>
+      <y>50</y>
       <w>140</w>
       <h>120</h>
     </coordinates>
@@ -16,7 +16,7 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>810</x>
+      <x>800</x>
       <y>210</y>
       <w>300</w>
       <h>120</h>
@@ -30,7 +30,7 @@ ReiseAnbieter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>330</x>
+      <x>320</x>
       <y>210</y>
       <w>320</w>
       <h>100</h>
@@ -47,34 +47,47 @@ ReiseAnbieter
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>460</y>
-      <w>160</w>
-      <h>80</h>
+      <x>300</x>
+      <y>550</y>
+      <w>210</w>
+      <h>230</h>
     </coordinates>
     <panel_attributes>SuchAuftrag
 -
-//attribute</panel_attributes>
+land: String
+ort: String
+zimmer: int
+personen: int
+anreise: Date
+abreise: Date
+-
++SuchAuftrag(land: String,
+ort: String,
+zimmer: int,
+personen: int,
+anreise: Date,
+abreise: Date):</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
-      <y>460</y>
+      <x>300</x>
+      <y>450</y>
       <w>160</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>SuchErgebnis
 -
-//attribute
-</panel_attributes>
+res: List&lt;Hotel&gt;
+-
++SuchErgebnis(res: List&lt;Hotel&gt;):</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>710</x>
+      <x>700</x>
       <y>450</y>
       <w>370</w>
       <h>140</h>
@@ -95,7 +108,7 @@ ReiseAnbieter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
+      <x>820</x>
       <y>320</y>
       <w>30</w>
       <h>150</h>
@@ -106,12 +119,34 @@ ReiseAnbieter
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>470</x>
+      <x>460</x>
       <y>300</y>
       <w>320</w>
       <h>170</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>300.0;150.0;300.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>480</y>
+      <w>270</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>550</y>
+      <w>220</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
   </element>
 </diagram>
